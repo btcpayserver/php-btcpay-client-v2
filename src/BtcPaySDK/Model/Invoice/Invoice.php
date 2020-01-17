@@ -143,7 +143,7 @@ class Invoice
         return $this->_posData;
     }
 
-    public function setPosData(string $posData)
+    public function setPosData(string $posData = null)
     {
         $this->_posData = $posData;
     }
@@ -203,7 +203,7 @@ class Invoice
         return $this->_orderId;
     }
 
-    public function setOrderId(string $orderId)
+    public function setOrderId(string $orderId = null)
     {
         $this->_orderId = $orderId;
     }
@@ -213,7 +213,7 @@ class Invoice
         return $this->_itemDesc;
     }
 
-    public function setItemDesc(string $itemDesc)
+    public function setItemDesc(string $itemDesc = null)
     {
         $this->_itemDesc = $itemDesc;
     }
@@ -223,7 +223,7 @@ class Invoice
         return $this->_itemCode;
     }
 
-    public function setItemCode(string $itemCode)
+    public function setItemCode(string $itemCode = null)
     {
         $this->_itemCode = $itemCode;
     }

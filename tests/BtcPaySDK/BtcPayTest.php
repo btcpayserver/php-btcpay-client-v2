@@ -30,18 +30,18 @@ class BtcPayTest extends TestCase
             BtcPaySDK\Env::Test,
             __DIR__."/../../examples/bitpay_private_test.key",
             new BtcPaySDK\Tokens(
-                "7UeQtMcsHamehE4gDZojUQbNRbSuSdggbH17sawtobGJ",
+                "GEqmzgY8JPdKvkEQH3EK5xNrvkeELUkwdZAe965sUnJv",
                 "5j48K7pUrX5k59DLhRVYkCupgw2CtoEt8DBFrHo2vW47"
             ),
-            "https://btcpay.host4crypto.com/",
+            "https://mainnet.demo.btcpayserver.org/",
             "YourMasterPassword"
         );
 
         $this->client = BtcPaySDK\Client::create()->withData(
             BtcPaySDK\Env::Test, __DIR__ . "/../../examples/bitpay_private_test.key", new BtcPaySDK\Tokens(
-            "7UeQtMcsHamehE4gDZojUQbNRbSuSdggbH17sawtobGJ",
+            "GEqmzgY8JPdKvkEQH3EK5xNrvkeELUkwdZAe965sUnJv",
             "5j48K7pUrX5k59DLhRVYkCupgw2CtoEt8DBFrHo2vW47"
-        ), "https://btcpay.host4crypto.com/" , "YourMasterPassword");
+        ), "https://mainnet.demo.btcpayserver.org/" , "YourMasterPassword");
 
         /**
          * Uncomment only if you wish to test the client with config files

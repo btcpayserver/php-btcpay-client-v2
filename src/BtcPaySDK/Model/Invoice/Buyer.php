@@ -28,7 +28,7 @@ class Buyer
         return $this->_name;
     }
 
-    public function setName(string $name)
+    public function setName(string $name = null)
     {
         $this->_name = $name;
     }
@@ -38,7 +38,7 @@ class Buyer
         return $this->_address1;
     }
 
-    public function setAddress1(string $address1)
+    public function setAddress1(string $address1 = null)
     {
         $this->_address1 = $address1;
     }
@@ -48,7 +48,7 @@ class Buyer
         return $this->_address2;
     }
 
-    public function setAddress2(string $address2)
+    public function setAddress2(string $address2 = null)
     {
         $this->_address2 = $address2;
     }
@@ -58,7 +58,7 @@ class Buyer
         return $this->_locality;
     }
 
-    public function setLocality(string $locality)
+    public function setLocality(string $locality = null)
     {
         $this->_locality = $locality;
     }
@@ -68,7 +68,7 @@ class Buyer
         return $this->_region;
     }
 
-    public function setRegion(string $region)
+    public function setRegion(string $region = null)
     {
         $this->_region = $region;
     }
@@ -78,7 +78,7 @@ class Buyer
         return $this->_postalCode;
     }
 
-    public function setPostalCode(string $postalCode)
+    public function setPostalCode(string $postalCode = null)
     {
         $this->_postalCode = $postalCode;
     }
@@ -88,7 +88,7 @@ class Buyer
         return $this->_country;
     }
 
-    public function setCountry(string $country)
+    public function setCountry(string $country = null)
     {
         $this->_country = $country;
     }
@@ -98,7 +98,7 @@ class Buyer
         return $this->_email;
     }
 
-    public function setEmail(string $email)
+    public function setEmail(string $email = null)
     {
         $this->_email = $email;
     }
@@ -108,7 +108,7 @@ class Buyer
         return $this->_phone;
     }
 
-    public function setPhone(string $phone)
+    public function setPhone(string $phone = null)
     {
         $this->_phone = $phone;
     }
@@ -118,7 +118,7 @@ class Buyer
         return $this->_notify;
     }
 
-    public function setNotify(bool $notify)
+    public function setNotify(bool $notify = null)
     {
         $this->_notify = $notify;
     }

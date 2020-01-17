@@ -11,10 +11,10 @@ require __DIR__.'/../vendor/autoload.php';
  * DEFINE THE FOLLOWING VARIEBLES FOR YOUR NEW CONFIGURATION FILE
  */
 
-$isProd = false; // Set to true if the environment for which the configuration file will be generated is Production.
+$isProd = true; // Set to true if the environment for which the configuration file will be generated is Production.
 // Will be set to Test otherwise
 
-$privateKeyname = 'PrivateKeyName.key'; // Add here the name for your Private key
+$privateKeyname = 'bitpay_private_test.key'; // Add here the name for your Private key
 
 $generateMerchantToken = true; // Set to true to generate a token for the Merchant facade
 $generatePayrollToken = false; // Set to true to generate a token for the Payroll facade (Request to Support if you need it)
@@ -25,7 +25,7 @@ $generateJSONfile = true; // Set to true to generate the Configuration File in J
 $generateYMLfile = true; // Set to true to generate the Configuration File in Yml format
 
 // adapt this to the URL of your BTCPayServer Install
-$yourUrl = "https://btcpayjungle.com";
+$yourUrl = "https://mainnet.demo.btcpayserver.org";
 
 /**
  * WARNING: DO NOT CHANGE ANYTHING FROM HERE ON

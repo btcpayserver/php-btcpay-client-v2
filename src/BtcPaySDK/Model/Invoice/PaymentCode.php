@@ -38,7 +38,7 @@ class PaymentCode
         return $this->_bip72b;
     }
 
-    public function setBip72b(string $bip72b)
+    public function setBip72b(string $bip72b = null)
     {
         $this->_bip72b = $bip72b;
     }
@@ -48,7 +48,7 @@ class PaymentCode
         return $this->_bip73;
     }
 
-    public function setBip73(string $bip73)
+    public function setBip73(string $bip73 = null)
     {
         $this->_bip73 = $bip73;
     }
@@ -58,7 +58,7 @@ class PaymentCode
         return $this->_eip681;
     }
 
-    public function setEip681(string $eip681)
+    public function setEip681(string $eip681 = null)
     {
         $this->_eip681 = $eip681;
     }
@@ -68,7 +68,7 @@ class PaymentCode
         return $this->_eip681b;
     }
 
-    public function setEip681b(string $eip681b)
+    public function setEip681b(string $eip681b = null)
     {
         $this->_eip681b = $eip681b;
     }

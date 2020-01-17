@@ -281,7 +281,7 @@ class Client
             $invoices = $mapper->mapArray(
                 json_decode($responseJson),
                 [],
-                'BitPaySDK\Model\Invoice\Invoice'
+                'BtcPaySDK\Model\Invoice\Invoice'
             );
 
         } catch (Exception $e) {
@@ -356,7 +356,7 @@ class Client
             $refunds = $mapper->mapArray(
                 json_decode($responseJson),
                 [],
-                'BitPaySDK\Model\Invoice\Refund'
+                'BtcPaySDK\Model\Invoice\Refund'
             );
 
         } catch (Exception $e) {
@@ -530,7 +530,7 @@ class Client
             $bills = $mapper->mapArray(
                 json_decode($responseJson),
                 [],
-                'BitPaySDK\Model\Bill\Bill'
+                'BtcPaySDK\Model\Bill\Bill'
             );
 
         } catch (Exception $e) {
@@ -620,7 +620,7 @@ class Client
             $rates = $mapper->mapArray(
                 json_decode($responseJson),
                 [],
-                'BitPaySDK\Model\Rate\Rate'
+                'BtcPaySDK\Model\Rate\Rate'
             );
 
         } catch (Exception $e) {
@@ -697,7 +697,7 @@ class Client
             $ledgers = $mapper->mapArray(
                 json_decode($responseJson),
                 [],
-                'BitPaySDK\Model\Ledger\Ledger'
+                'BtcPaySDK\Model\Ledger\Ledger'
             );
 
         } catch (Exception $e) {
@@ -770,7 +770,7 @@ class Client
             $batches = $mapper->mapArray(
                 json_decode($responseJson),
                 [],
-                'BitPaySDK\Model\Payout\PayoutBatch'
+                'BtcPaySDK\Model\Payout\PayoutBatch'
             );
 
         } catch (Exception $e) {
@@ -895,7 +895,7 @@ class Client
             $settlements = $mapper->mapArray(
                 json_decode($responseJson),
                 [],
-                'BitPaySDK\Model\Settlement\Settlement'
+                'BtcPaySDK\Model\Settlement\Settlement'
             );
 
         } catch (Exception $e) {
@@ -1064,7 +1064,7 @@ class Client
             $subscriptions = $mapper->mapArray(
                 json_decode($responseJson),
                 [],
-                'BitPaySDK\Model\Subscription\Subscription'
+                'BtcPaySDK\Model\Subscription\Subscription'
             );
 
         } catch (Exception $e) {
@@ -1118,7 +1118,7 @@ class Client
     public function getCurrencies(): array
     {
         try {
-            $currencies = json_decode($this->_RESTcli->get("currencies/", null, false), false);
+            $currencies = json_decode(file_get_contents(__DIR__ . "/currencies.json"), true);
         } catch (Exception $e) {
             throw new CurrencyQueryException("failed to serialize Currency object : ".$e->getMessage());
         }
