@@ -35,7 +35,7 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "BitPaySDK\\Test\\": "tests/"
+      "BtcPaySDK\\Test\\": "tests/"
     }
   }
 }
