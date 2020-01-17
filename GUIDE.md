@@ -38,6 +38,7 @@ JSON:
     "Environment": "",
     "EnvConfig": {
       "Test": {
+        "Url": "",
         "PrivateKeyPath": "",
         "PrivateKeySecret": "",
         "ApiTokens": {
@@ -46,6 +47,7 @@ JSON:
         }
       },
       "Prod": {
+        "Url": "",
         "PrivateKeyPath": "",
         "PrivateKeySecret": "",
         "ApiTokens": {
@@ -64,12 +66,14 @@ BitPayConfiguration:
   Environment: null
   EnvConfig:
     Test:
+      Url: null
       PrivateKeyPath: null
       PrivateKeySecret: null
       ApiTokens:
         merchant: null
         payroll: null
     Prod:
+      Url: null
       PrivateKeyPath: null
       ApiTokens:
         merchant: null
@@ -95,7 +99,7 @@ Add to your composer.json file by hand.
     ...
     "require": {
         ...
-        "bitpay/sdk": "~3.0"
+        "btcpayserver/sdk": "~3.0"
     }
     ...
 }
@@ -104,33 +108,33 @@ Add to your composer.json file by hand.
 Once you have added this, just run:
 
 ```bash
-php composer.phar update bitpay/sdk
+php composer.phar update btcpayserver/sdk
 ```
 
 ### Install using composer
 
 ```bash
-php composer.phar require bitpay/sdk:~3.0
+php composer.phar require btcpayserver/sdk:~3.0
 ```
 
-### Initializing your BitPay client
+### Initializing your BtcPay client
 
 Once you have the environment file (JSON or YML previously generated) you can initialize the client on two different ways:
 
 ```php
 // Provide the full path to the env file which you have previously stored securely.
 
-$bitpay = BitPaySDK\Client::create()->withFile([FULL_PATH_TO_THE_CONFIG_FILE]);
+$bitpay = BtcPaySDK\Client::create()->withFile([FULL_PATH_TO_THE_CONFIG_FILE]);
 ```
 
 ```php
 // Initialize with separate variables 
 // and Private Key stored in file.
 
-$bitpay = BitPaySDK\Client::create()->withData(
-    BitPaySDK\Env.Test,
+$bitpay = BtcPaySDK\Client::create()->withData(
+    BtcPaySDK\Env.Test,
     "[FULL_PATH_TO_THE_PRIVATE_KEY]",
-    new BitPaySDK\Tokens(
+    new BtcPaySDK\Tokens(
         "7UeQtMcsHamehE4gDZojUQbNRbSuSdggbH17sawtobGJ", //merchant
         "5j48K7pUrX5k59DLhRVYkCupgw2CtoEt8DBFrHo2vW47" //payroll
     ),
@@ -141,10 +145,10 @@ $bitpay = BitPaySDK\Client::create()->withData(
 // Initialize with separate variables 
 // and Private Key as HEX string.
 
-$bitpay = BitPaySDK\Client::create()->withData(
-    BitPaySDK\Env.Test,
+$bitpay = BtcPaySDK\Client::create()->withData(
+    BtcPaySDK\Env.Test,
     "[PRIVATE_KEY_AS_HEX_STRING]",
-    new BitPaySDK\Tokens(
+    new BtcPaySDK\Tokens(
         "7UeQtMcsHamehE4gDZojUQbNRbSuSdggbH17sawtobGJ", //merchant
         "5j48K7pUrX5k59DLhRVYkCupgw2CtoEt8DBFrHo2vW47" //payroll
     )

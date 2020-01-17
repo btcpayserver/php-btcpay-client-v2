@@ -24,6 +24,8 @@ $yourMasterPassword = 'YourMasterPassword'; //Will be used to encrypt your Priva
 $generateJSONfile = true; // Set to true to generate the Configuration File in Json format
 $generateYMLfile = true; // Set to true to generate the Configuration File in Yml format
 
+// adapt this to the URL of your BTCPayServer Install
+$yourUrl = "https://btcpayjungle.com";
 
 /**
  * WARNING: DO NOT CHANGE ANYTHING FROM HERE ON
@@ -77,7 +79,7 @@ try {
  * The pairing code has to be approved in the BitPay Dashboard
  * THIS is just a cUrl example, which explains how to use the key pair for signing requests
  **/
-$baseUrl = $isProd ? 'https://bitpay.com' : 'https://test.bitpay.com';
+$baseUrl = $isProd ? $yourUrl : 'https://test.bitpay.com';
 $env = $isProd ? 'Prod' : 'Test';
 
 
@@ -133,6 +135,7 @@ try {
         echo "\r\n    -> Token: ";
         echo $merchantToken;
         echo "\r\n";
+        echo "Click here to validate your pairingCode " . $yourUrl . "/api-access-request?pairingCode=" . $resultData['data'][0]['pairingCode'];
 
         /** End of request **/
     }
@@ -185,6 +188,7 @@ try {
         echo "\r\n    -> Token: ";
         echo $payrolToken;
         echo "\r\n";
+        echo "Click here to validate your pairingCode " . $yourUrl . "/api-access-request?pairingCode=" . $resultData['data'][0]['pairingCode'];
 
         /** End of request **/
     }
@@ -205,6 +209,7 @@ $config = [
         "Environment" => $env,
         "EnvConfig"   => [
             'Test' => [
+                "Url"              => $isProd ? null : $yourUrl,
                 "PrivateKeyPath"   => $isProd ? null : __DIR__."/".$privateKeyname,
                 "PrivateKeySecret" => $isProd ? null : $yourMasterPassword,
                 "ApiTokens"        => [
@@ -213,6 +218,7 @@ $config = [
                 ],
             ],
             'Prod' => [
+                "Url"              => $isProd ? $yourUrl : null,
                 "PrivateKeyPath"   => $isProd ? __DIR__."/".$privateKeyname : null,
                 "PrivateKeySecret" => $isProd ? $yourMasterPassword : null,
                 "ApiTokens"        => [
