@@ -3,7 +3,11 @@
 
 namespace BtcPaySDK\Model\Invoice;
 
-
+/**
+ * PaymentCodes will be deprecated TODO on version 4.0
+ *
+ * @deprecated
+ */
 class PaymentCodes
 {
     protected $_btc;
