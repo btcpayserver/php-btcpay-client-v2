@@ -1,4 +1,4 @@
-# WORK IN PROGRESS: BtcPay PHP Client (Do not use for production yet!)
+# BtcPay PHP Client
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://raw.githubusercontent.com/btcpayserver/php-btcpay-client-v2/master/LICENSE)
 [![Packagist](https://img.shields.io/packagist/v/btcpayserver/sdk.svg?style=flat-square)](https://packagist.org/packages/btcpayserver/sdk)
 

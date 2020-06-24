@@ -209,7 +209,7 @@ $config = [
         "Environment" => $env,
         "EnvConfig"   => [
             'Test' => [
-                "Url"              => $isProd ? null : $yourUrl,
+                "Url"              => $isProd ? null : $yourUrl."/",
                 "PrivateKeyPath"   => $isProd ? null : __DIR__."/".$privateKeyname,
                 "PrivateKeySecret" => $isProd ? null : $yourMasterPassword,
                 "ApiTokens"        => [
@@ -218,7 +218,7 @@ $config = [
                 ],
             ],
             'Prod' => [
-                "Url"              => $isProd ? $yourUrl : null,
+                "Url"              => $isProd ? $yourUrl."/" : null,
                 "PrivateKeyPath"   => $isProd ? __DIR__."/".$privateKeyname : null,
                 "PrivateKeySecret" => $isProd ? $yourMasterPassword : null,
                 "ApiTokens"        => [
