@@ -1,4 +1,9 @@
 # BtcPay PHP Client
+
+Note: This project is archived and no longer supported.
+In the future you want to use the [Greenfield API](https://docs.btcpayserver.org/API/Greenfield/v1/) for invoice creating.
+At the time of writing this feature is still in [development](https://github.com/btcpayserver/btcpayserver/pull/1760).
+
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://raw.githubusercontent.com/btcpayserver/php-btcpay-client-v2/master/LICENSE)
 [![Packagist](https://img.shields.io/packagist/v/btcpayserver/sdk.svg?style=flat-square)](https://packagist.org/packages/btcpayserver/sdk)
 
@@ -10,7 +15,8 @@ To get up and running with our PHP library quickly, follow [The GUIDE](https://g
 
 ## Support
 
-* https://github.com/btcpayserver/php-btcpay-client-v2/issues
+* https://chat.btcpayserver.org/
+* bugs or other issues: https://github.com/btcpayserver/php-btcpay-client-v2/issues
 
 ## Contribute
 
